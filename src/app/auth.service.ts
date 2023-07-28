@@ -13,4 +13,6 @@ export class AuthService {
     return this._HttpClient.post('https://movies-api.routemisr.com/signup',registerformvalue)
   }
 
+
+
 }

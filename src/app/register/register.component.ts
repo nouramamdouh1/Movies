@@ -14,6 +14,7 @@ export class RegisterComponent {
  
  
 registerForm:FormGroup;
+flag:boolean = false;
 
   constructor(private _AuthService:AuthService , private _Router:Router){
 
@@ -29,13 +30,12 @@ registerForm:FormGroup;
     if (registerForm.valid == true) {
          this._AuthService.register(registerForm.value).subscribe((data)=>{
             if (data.message=='success') {
-              // this._Router.navigate(['/login']);
-              console.log("done");
+              return this._Router.navigate(['/login']);
               
               
             }else{
-              
-              console.log("failed");
+              return this.flag=true; 
+              // console.log("failed");
             }
          })
         }
