@@ -1,0 +1,30 @@
+ <form [formGroup]="registerForm"  class="w-50 m-auto my-5" (ngSubmit)="getregisterinfo(registerForm)">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="first_name" class="form-control" >
+        <p *ngIf =" registerForm.controls['first_name'].touched&&registerForm.controls['first_name'].errors !=null" class="text-danger py-2">firstname invalid</p>
+
+          </div> 
+     <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="last_name" class="form-control">
+        <p *ngIf =" registerForm.controls['last_name'].touched&&registerForm.controls['last_name'].errors !=null" class="text-danger py-2">Lastname invalid</p>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" class="form-control" >
+        <p *ngIf ="registerForm.controls['email'].touched&&registerForm.controls['email'].errors !=null" class="text-danger py-2">Email invalid</p>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" class="form-control" >
+        <p *ngIf ="registerForm.controls['password'].touched&&registerForm.controls['password'].errors !=null" class="text-danger py-2">invalid</p>
+    </div> 
+    <br>
+       <button class="btn btn-primary" type="submit">submit</button>
+</form> 
+
+
+
+
+
