@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   loginForm!: FormGroup;
+  flag:boolean=false;
+  errormessage!:string;
 
   constructor(private _AuthService:AuthService , private _Router:Router){
 
@@ -26,13 +28,12 @@ export class LoginComponent {
     if (loginForm.valid == true) {
          this._AuthService.login(loginForm.value).subscribe((data)=>{
             if (data.message=='success') {
-              // return this._Router.navigate(['/home']);
-              console.log('login');
-              
+              return this._Router.navigate(['/home']);              
               
             }else{
-              console.log('false');
-
+              this.flag=true;
+             return this.errormessage=data.message;
+             
             }
          })
         }
