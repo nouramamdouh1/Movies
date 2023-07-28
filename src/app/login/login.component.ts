@@ -10,16 +10,44 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  loginForm: FormGroup;
+  loginForm!: FormGroup;
 
-constructor(private _Authservice:AuthService , private _Router:Router){
+  constructor(private _AuthService:AuthService , private _Router:Router){
 
-  this.loginForm = new FormGroup({
-    'email' : new FormControl(null, [Validators.required, Validators.email]),
-    'password': new FormControl(null, [Validators.required , Validators.min(8)])
-  })
+  }
+  ngOnInit():void {
+    
+    this.loginForm = new FormGroup({
+      'email': new FormControl(null, [Validators.required , Validators.email]),
+      'password': new FormControl(null, [Validators.required , Validators.min(8)]),
+    });
+  } 
+  getlogininfo(loginForm:any){
+    if (loginForm.valid == true) {
+         this._AuthService.login(loginForm.value).subscribe((data)=>{
+            if (data.message=='success') {
+              // return this._Router.navigate(['/home']);
+              console.log('login');
+              
+              
+            }else{
+              console.log('false');
+
+            }
+         })
+        }
+   }
+
+
+
   
-}
-  
 
 }
+
+
+
+
+
+
+
+

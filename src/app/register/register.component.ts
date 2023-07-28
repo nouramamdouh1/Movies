@@ -13,29 +13,34 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
  
  
-registerForm:FormGroup;
+registerForm!:FormGroup;
 flag:boolean = false;
 
   constructor(private _AuthService:AuthService , private _Router:Router){
 
+  }
+  ngOnInit():void {
+    
     this.registerForm = new FormGroup({
       'first_name': new FormControl(null, [Validators.required]),
       'last_name': new FormControl(null, [Validators.required]),
       'email': new FormControl(null, [Validators.required , Validators.email]),
       'password': new FormControl(null, [Validators.required , Validators.min(8)]),
     });
-  }
-  ngOnInit():void {} 
+  } 
   getregisterinfo(registerForm:any){
     if (registerForm.valid == true) {
          this._AuthService.register(registerForm.value).subscribe((data)=>{
             if (data.message=='success') {
               return this._Router.navigate(['/login']);
+              // console.log('true');
+              
               
               
             }else{
               return this.flag=true; 
-              // console.log("failed");
+              // console.log('false');
+              
             }
          })
         }
