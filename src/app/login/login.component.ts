@@ -13,8 +13,10 @@ export class LoginComponent {
   loginForm!: FormGroup;
   flag:boolean=false;
   errormessage!:string;
+  islogin:boolean=false;
 
   constructor(private _AuthService:AuthService , private _Router:Router){
+    
 
   }
   ngOnInit():void {
@@ -28,6 +30,8 @@ export class LoginComponent {
     if (loginForm.valid == true) {
          this._AuthService.login(loginForm.value).subscribe((data)=>{
             if (data.message=='success') {
+              this._AuthService.savecurrentusers(data.user.first_name,data.user.last_name,data.user.email,data.token);
+            
               return this._Router.navigate(['/home']);              
               
             }else{
