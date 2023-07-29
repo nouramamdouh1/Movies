@@ -20,4 +20,11 @@ export class NavbarComponent {
     }
    } );
 }
+
+
+logout(){
+  this._AuthService.logout();
+
+}
+
 }
