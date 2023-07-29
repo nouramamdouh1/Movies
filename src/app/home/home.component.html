@@ -1,1 +1,53 @@
-<p>home works!</p>
+
+<div class="container box ">
+    <div class="row">
+        <div class="col-lg-4 col-md-4">
+            <div class="text w-25"></div>
+           <h2 style="color: white;">Trending <br> Movies <br> To watch it</h2> 
+           <p class="ligt-text">most watched movies by days</p>
+           <div class="text2 w-30"></div>
+
+        </div>
+        <div class="col-lg-2 col-md-2 my-2 movie" *ngFor="let movie of movies">
+
+            
+                <div class="card h-100 border-0">
+                <img height="250px" width="100px" [src]="imgprefix+movie.poster_path" class="card-img-top movie-img" alt="...">
+                    <div class="card-body">
+                        <h4 style="color: white;" class="h6" class="card-title">{{movie.title}}</h4>
+                    </div>
+                    <div class="vote">{{movie.vote_average}}</div>
+                </div>
+          
+
+        </div>
+    </div>
+</div>
+
+
+<!--  -->
+<div class="container all">
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <div class="text3 w-25"></div>
+       <h2 style="color: white;">Trending <br> Tv Shows <br>To watch it</h2> 
+       <div class="text4 w-30"></div>
+
+    </div>
+    <div class="col-lg-2 col-md-2 my-2 movie" *ngFor="let tv of tvs">
+
+            
+        <div class="card h-100 border-0">
+        <img height="250px" width="100px" [src]="imgprefix+tv.poster_path" class="card-img-top movie-img" alt="...">
+            <div class="card-body">
+                <h4 style="color: white;" class="h6" class="card-title">{{tv.name}}</h4>
+            </div>
+            <div class="vote2">{{tv.vote_average}}</div>
+        </div>
+  
+
+</div>
+
+</div>
+</div>
+<app-footer></app-footer>

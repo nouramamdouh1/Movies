@@ -39,5 +39,5 @@ export class AuthService {
     this.currentusers.next(null);
     this._Router.navigate(['/login']);
   }
-
+  
 }

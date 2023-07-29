@@ -1,0 +1,56 @@
+
+.text{
+    margin-top: 20px;
+    border-top:1px solid white ;
+    padding-bottom: 9px;
+}
+.text2{
+    border-top:1px solid white ;
+    padding-top: 9px;
+}
+.ligt-text{
+    padding: 7px;
+    color: white;
+}
+.card-img-top{
+    border-radius: 0px;
+    border: none !important;
+}
+.card{
+    background-color: transparent !important;
+}
+.movie{
+    position: relative;
+}
+.vote{
+    position: absolute;
+    left: 157px;
+    color: white;
+    background-color: rgb(154, 154, 253);
+    padding: 7px;
+}
+.box{
+    margin-top: 70px;
+}
+.all{
+    margin-top: 100px;
+}
+.text3{
+    margin-top: 25px;
+    border-top:1px solid white ;
+    padding-bottom: 18px;
+}
+.text4{
+    border-top:1px solid white ;
+    padding-top: 18px;
+}
+.vote2{
+    position: absolute;
+    left: 161px;
+    color: white;
+    background-color: rgb(154, 154, 253);
+    padding: 7px;
+}
+
+
+  
