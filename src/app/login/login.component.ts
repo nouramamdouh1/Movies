@@ -13,7 +13,6 @@ export class LoginComponent {
   loginForm!: FormGroup;
   flag:boolean=false;
   errormessage!:string;
-  islogin:boolean=false;
 
   constructor(private _AuthService:AuthService , private _Router:Router){
     

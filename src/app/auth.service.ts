@@ -12,6 +12,9 @@ export class AuthService {
   
 
   constructor(private _HttpClient: HttpClient) {
+    if (localStorage.getItem('userdata') != null ){
+      this.currentusers.next(JSON.parse(localStorage.getItem('userdata') || '{}'));
+    }
    }
    
   register(registerformvalue:any):Observable<any> {
@@ -24,6 +27,7 @@ export class AuthService {
 
   savecurrentusers(firstname:any, lastname:any , email:any , token:any){
     let user = new userdata (firstname, lastname , email , token);
+    localStorage.setItem('userdata', JSON.stringify(user));
     this.currentusers.next(user);
 
 
