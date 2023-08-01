@@ -1,10 +1,12 @@
+
+<h2 class="header">Login Form</h2>
 <form [formGroup]="loginForm" class="my-5 m-auto w-50" (ngSubmit)="getlogininfo(loginForm)">
     <div *ngIf="flag" class="alert alert-danger">
         <p>{{errormessage}}</p>
     </div>
     <div class="form-group">
         <label >Email</label>
-        <input type="email" formControlName="email" class="form-control" >
+        <input style="margin-bottom: 10px;" type="email" formControlName="email" class="form-control" >
         <p *ngIf= "loginForm.controls['email'].errors != null && loginForm.controls['email'].touched" class="text-danger">invalid email</p>
     </div>
 
@@ -14,5 +16,5 @@
         <p  *ngIf= "loginForm.controls['password'].errors != null && loginForm.controls['password'].touched" class="text-danger">invalid password</p>
     </div>
     <br>
-    <button class="btn btn-primary" type="submit">submit</button>
+    <button class="btn btn-secondary" type="submit">Login</button>
 </form>

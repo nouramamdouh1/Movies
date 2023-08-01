@@ -33,13 +33,13 @@ flag:boolean = false;
          this._AuthService.register(registerForm.value).subscribe((data)=>{
             if (data.message=='success') {
               return this._Router.navigate(['/login']);
-              // console.log('true');
+              console.log('true');
               
               
               
             }else{
               return this.flag=true; 
-              // console.log('false');
+              console.log('false');
               
             }
          })

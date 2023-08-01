@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-4 col-md-4 col-sm-12" >
+            <img class="img-fluid" [src]= "imgprefix+show?.poster_path" alt="">
+                     
+     
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12 my-5" >
+            <h2 style="color: white;" class="my-1" class="title">{{show?.name}}</h2>
+            <p class="tagline" >{{show?.tagline}}</p> 
+             
+            <p class="vote">Vote : {{show?.vote_average}}</p>
+            <p class="vote">Popularity : {{show?.popularity}}</p>
+            <p class="vote">Released date : {{show?.release_date}}</p>
+            <p class="overview">{{show?.overview}}</p>
+        </div>
+    </div>
+</div>
+
+ <app-footer></app-footer> 

@@ -1,0 +1,26 @@
+<div class="back">
+    <div class="words">
+        <p>Tv Shows</p>
+    </div>
+</div>
+
+<div class="container box ">
+    <div class="row">
+        
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 my-2 movie " *ngFor="let tvshow of tvshows" [routerLink]="['/tvdetails',tvshow.id]" >
+
+            
+                <div class="card h-100 border-0">
+                <img height="250px" width="100px" [src]="imgprefix+tvshow.poster_path" class="card-img-top movie-img" alt="...">
+                    <div class="card-body">
+                        <h4 style="color: white;" class="h6" class="card-title">{{tvshow.name}}</h4>
+                    </div>
+                    <div class="vote">{{tvshow.vote_average}}</div>
+                </div>
+          
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+

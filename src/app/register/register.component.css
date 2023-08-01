@@ -1,0 +1,16 @@
+
+.header{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+label{
+    color: white;
+    margin-bottom: 2px;
+}
+.btn{
+    padding: 7px 15px;
+    font-size: 17px;
+}

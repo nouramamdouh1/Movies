@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-4 col-md-4 col-sm-12" >
+            <img class="img-fluid" [src]= "imgprefix+moviedetails?.poster_path" alt="">
+           
+     
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-12 my-5" >
+            <h2 class="my-1" class="title">{{moviedetails?.title}}</h2>
+            <p class="tagline" >{{moviedetails?.tagline}}</p>
+            <span class="bg-info mx-1 sp " *ngFor="let one of moviedetails.genres">
+               {{one.name}}
+            </span>
+            <p class="vote">Vote : {{moviedetails?.vote_average}}</p>
+            <p class="vote">Popularity : {{moviedetails?.popularity}}</p>
+            <p class="vote">Released date : {{moviedetails?.release_date}}</p>
+            <p class="overview">{{moviedetails?.overview}}</p>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

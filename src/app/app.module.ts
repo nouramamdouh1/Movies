@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { MoviesComponent } from './movies/movies.component';
+import { TvshowsComponent } from './tvshows/tvshows.component';
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
+import { TvdetailsComponent } from './tvdetails/tvdetails.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    MoviesComponent,
+    TvshowsComponent,
+    MoviedetailsComponent,
+    TvdetailsComponent,
+    NotfoundComponent
    
   ],
   imports: [
